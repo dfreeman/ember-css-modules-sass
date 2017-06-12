@@ -1,0 +1,7 @@
+@mixin test-mixin($family) {
+  font-family: $family;
+}
+
+.component {
+  @include test-mixin(app);
+}

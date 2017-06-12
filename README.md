@@ -1,26 +1,40 @@
-# ember-css-modules-sass
+# ember-css-modules-sass [![Build Status](https://travis-ci.org/dfreeman/ember-css-modules-sass.svg?branch=master)](https://travis-ci.org/dfreeman/ember-css-modules-sass)
 
-This README outlines the details of collaborating on this Ember addon.
+This [ember-css-modules](https://github.com/salsify/ember-css-modules) plugin automatically configures ECM to handle SCSS syntax and work collaboratively with [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass).
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-css-modules-sass`
-* `npm install`
+This addon will typically be used alongside both ember-css-modules _and_ ember-cli-sass.
 
-## Running
+```sh
+ember install ember-css-modules ember-cli-sass ember-css-modules-sass
+```
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Usage
 
-## Running Tests
+Just the same as with vanilla ember-css-modules, but using `.scss` files for your modules, e.g.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```hbs
+{{! app/components/my-component/template.hbs }}
 
-## Building
+<div local-class="cool">😎</div>
+```
 
-* `ember build`
+```scss
+// app/components/my-component/styles.scss
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+@mixin blowinUp($factor) {
+  font-size: $factor;
+}
+
+.cool {
+  @include blowinUp(200%);
+}
+```
+
+![image](https://user-images.githubusercontent.com/108688/27016516-daab38b6-4eee-11e7-8577-7d4ad475eb7f.png)
+
+
+## Configuration
+
+This plugin will configure ember-css-modules so that classes in all `.scss` files in your project will be namespaced. If you need finer-grained control over the treatment of specific aspects of the interplay between CSS Modules and Sass, see the [ember-css-modules preprocessors guide](https://github.com/salsify/ember-css-modules/blob/master/docs/PREPROCESSORS.md).

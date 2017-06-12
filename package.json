@@ -1,38 +1,42 @@
 {
   "name": "ember-css-modules-sass",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "An ember-css-modules plugin that configures the build pipeline for use with Sass",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-css-modules-plugin"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Dan Freeman",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "dfreeman/ember-css-modules-sass",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember test"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.0.0"
+    "postcss-scss": "^1.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "2.13.2",
+    "ember-cli-babel": "^6.0.0",
     "ember-cli-dependency-checker": "^1.3.0",
     "ember-cli-eslint": "^3.0.0",
     "ember-cli-htmlbars": "^1.1.1",
     "ember-cli-htmlbars-inline-precompile": "^0.4.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.0.0",
+    "ember-cli-sass": "^6.2.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-css-modules": "^0.7.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
@@ -45,6 +49,9 @@
     "node": ">= 4"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "paths": [
+      "tests/dummy-addon"
+    ]
   }
 }
