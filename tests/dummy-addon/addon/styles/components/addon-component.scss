@@ -1,0 +1,7 @@
+@mixin addon-mixin($family) {
+  font-family: $family;
+}
+
+.component {
+  @include addon-mixin(addon);
+}
