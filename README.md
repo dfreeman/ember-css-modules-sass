@@ -2,7 +2,8 @@
 
 This [ember-css-modules](https://github.com/salsify/ember-css-modules) plugin automatically configures ECM to handle SCSS syntax and work collaboratively with [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass).
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
 This addon will typically be used alongside both ember-css-modules _and_ ember-cli-sass.
 

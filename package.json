@@ -6,50 +6,55 @@
     "ember-addon",
     "ember-css-modules-plugin"
   ],
+  "repository": "dfreeman/ember-css-modules-sass",
   "license": "MIT",
   "author": "Dan Freeman",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "dfreeman/ember-css-modules-sass",
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
+    "test:all": "ember try:each",
     "install-all": "cd tests/dummy-sass-addon && yarn && cd ../dummy-less-addon && yarn"
   },
   "dependencies": {
-    "postcss-scss": "^1.0.0"
+    "postcss-scss": "^2.0.0"
   },
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "~2.18.0",
+    "ember-cli": "~3.3.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-qunit": "^4.1.1",
-    "ember-cli-sass": "^6.2.0",
+    "ember-cli-qunit": "^4.3.2",
+    "ember-cli-sass": "^7.2.0",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
     "ember-css-modules": "^1.0.0-beta.1",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
-    "ember-load-initializers": "^1.0.0",
+    "ember-load-initializers": "^1.1.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~2.18.0",
+    "ember-source": "~3.3.0",
+    "ember-source-channel-url": "^1.0.1",
+    "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^5.2.1",
-    "loader.js": "^4.2.3"
+    "eslint-plugin-node": "^6.0.1",
+    "loader.js": "^4.2.3",
+    "qunit-dom": "^0.6.2"
   },
   "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+    "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
