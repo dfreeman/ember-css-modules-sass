@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 
 const Plugin = require('ember-css-modules/lib/plugin');
