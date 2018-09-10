@@ -54,6 +54,9 @@
     "qunit-dom": "^0.6.2",
     "sass": "^1.13.2"
   },
+  "peerDependencies": {
+    "ember-css-modules": "^1.0.0-beta.1"
+  },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
   },
