@@ -1857,6 +1857,10 @@ dot-prop@^4.1.0:
   dependencies:
     is-obj "^1.0.0"
 
+"dummy-addon@link:tests/dummy-addon":
+  version "0.0.0"
+  uid ""
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
