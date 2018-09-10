@@ -1,13 +1,14 @@
-import { test } from 'qunit';
 import $ from 'jquery';
-import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
+import { module, test } from 'qunit';
+import { visit } from '@ember/test-helpers';
+import { setupApplicationTest } from 'ember-qunit';
 
-moduleForAcceptance('Acceptance | verify styles');
+module('Acceptance | verify styles v2', function(hooks) {
+  setupApplicationTest(hooks);
 
-test('app and addon styles are processed', function(assert) {
-  visit('/');
+  test('app and addon styles are processed', async function(assert) {
+    await visit('/');
 
-  andThen(function() {
     let $appComponent = $('[data-app-component]');
     let $addonComponent = $('[data-addon-component]');
 

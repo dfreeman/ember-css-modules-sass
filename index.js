@@ -1,6 +1,6 @@
-/* eslint-env node */
 'use strict';
 
+// eslint-disable-next-line node/no-unpublished-require
 const Plugin = require('ember-css-modules/lib/plugin');
 
 module.exports = {
