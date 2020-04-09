@@ -39,3 +39,7 @@ Just the same as with vanilla ember-css-modules, but using `.scss` files for you
 ## Configuration
 
 This plugin will configure ember-css-modules so that classes in all `.scss` files in your project will be namespaced. If you need finer-grained control over the treatment of specific aspects of the interplay between CSS Modules and Sass, see the [ember-css-modules preprocessors guide](https://github.com/salsify/ember-css-modules/blob/master/docs/PREPROCESSORS.md).
+
+## Usage with Embroider
+
+For applications, the relative output path from one CSS processor is in a different location with Embroider than with a regular Ember CLI build. If `ember-css-modules-sass` detects that you're running in an application with `@embroider/compat` installed, it will attempt to adjust its `intermediateOutputPath` setting accordingly.
