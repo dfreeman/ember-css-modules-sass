@@ -24,12 +24,24 @@ class SassPlugin extends Plugin {
 
   config() {
     return {
-      intermediateOutputPath: this.isForAddon() ? 'addon.scss' : 'app/styles/app.scss',
+      intermediateOutputPath: this._intermediateOutputPath(),
       extension: 'scss',
       postcssOptions: {
         syntax: require('postcss-scss')
       }
     };
+  }
+
+  _intermediateOutputPath() {
+    return this.isForAddon()
+      ? 'addon.scss'
+      : this._hasEmbroider()
+      ? 'app.scss'
+      : 'app/styles/app.scss';
+  }
+
+  _hasEmbroider() {
+    return '@embroider/compat' in (this.parent.pkg.devDependencies || {});
   }
 
   _verifySetup(parent) {
